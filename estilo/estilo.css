@@ -1,0 +1,43 @@
+/*
+tema "green"
+rgba(202, 210, 197, 1)
+rgba(132, 169, 140, 1)
+rgba(82, 121, 111, 1)
+rgba(53, 79, 82, 1)
+rgba(47, 62, 70, 1)
+
+*/
+
+:root {
+    --cor-texto: rgba(47, 62, 70, 1);
+    --cor-fundo: rgba(202, 210, 197, 1);
+    --cor-link: rgba()
+    --font: Tahoma, sans-serif;
+
+}
+
+body {
+    background-color: var(--cor-fundo);
+    /* texto */
+    font-family: var(--font);
+    color: var(--cor-texto);
+}
+
+.iconetexto {
+    display: flex;
+}
+
+.iconecabeca {
+    display: inline-block;
+    background-color: aliceblue;
+    height: 50px;
+    width: 70px;
+}
+.titulo {
+    display: inline-block;
+    background-color: aliceblue;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    padding: 10px 0;
+}
