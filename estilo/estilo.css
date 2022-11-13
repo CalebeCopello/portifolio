@@ -11,19 +11,27 @@ rgba(47, 62, 70, 1)
 :root {
     --cor-texto: rgba(47, 62, 70, 1);
     --cor-fundo: rgba(202, 210, 197, 1);
+    --cor-fundo2: rgba(132, 169, 140, 1);
     --cor-link: rgba()
     --font: Tahoma, sans-serif;
 
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    margin-top: 3px;
+    margin-left: 5px;
     background-color: var(--cor-fundo);
     /* texto */
     font-family: var(--font);
     color: var(--cor-texto);
 }
 
-.iconetexto {
+.juntardivs {
     display: flex;
 }
 
@@ -31,13 +39,32 @@ body {
     display: inline-block;
     background-color: aliceblue;
     height: 50px;
-    width: 70px;
+    width: 50px;
 }
 .titulo {
     display: inline-block;
     background-color: aliceblue;
-    height: 30px;
+    height: 20px;
     width: 200px;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
+    font-family: var(--font);
+    color: var(--cor-texto);
+    font-weight: 700;
+    font-size: 16px;
+
+}
+.busca {
+    background-color: var(--cor-fundo2);
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+.busca input{
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 4px 5px;
+    font-size: 10px;
+    color: var(--cor-texto);
 }
