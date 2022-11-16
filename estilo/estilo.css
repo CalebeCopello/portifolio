@@ -68,3 +68,6 @@ body {
     font-size: 10px;
     color: var(--cor-texto);
 }
+.sobre-div {
+    display: none;
+}
