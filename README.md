@@ -1,2 +1,2 @@
-# portifolio
- Personal portifolio blog
+# Portifolio
+ Um blog e portifólio pessoal
