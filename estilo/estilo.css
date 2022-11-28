@@ -28,6 +28,7 @@
     --cor-contraste-b: rgba(66,61,43,1);
 --------------------------------------------------
 */
+@charset "UTF-8";
 
 :root {
     --cor-base: rgba(100,122,163,1);
@@ -35,7 +36,7 @@
     --cor-analoga-b: rgba(170,195,240,1);
     --cor-contraste-a: rgba(87,71,36,1);
     --cor-contraste-b: rgba(163,143,100,1);
-    --font: Tahoma, sans-serif;
+    --font: Tahoma, Arial, sans-serif;
 }
 *{
     margin: 0;
@@ -48,10 +49,16 @@ body {
     /* texto */
     font-family: var(--font);
     color: var(--cor-analoga-b);
+    font-size: 1em;
 }
 h1 {
     color: var(--cor-analoga-a);
     text-align: center;
+    font-size: 2.5em;
+    padding: 1rem;
+}
+p {
+    text-align: justify;
 }
 /*  LINKS   */
 a {
@@ -68,26 +75,26 @@ a:active {
     font-weight: bolder;
 }
     /*  CABEÇALHO   */
-.juntardivs {
+.juntarcabecalho {
     display: flex;
+    height: 5rem;
+    width: 20rem;
 }
 .iconecabeca {
     display: inline-block;
-    /* background-color: aliceblue; */
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 2rem;
 }
 .titulo {
     display: inline-block;
-    /* background-color: aliceblue; */
-    height: 20px;
-    width: 200px;
+    height: 3rem;
+    width: 12rem;
     text-align: center;
     padding: 15px;
     font-family: var(--font);
     color: var(--cor-analoga-a);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.75em;
     /*  DIVS DE CONTEÚDO    */
 }
 .sobre-div {
