@@ -1,18 +1,31 @@
 /*
-tema "green"
-rgba(202, 210, 197, 1)
-rgba(132, 169, 140, 1)
-rgba(82, 121, 111, 1)
-rgba(53, 79, 82, 1)
-rgba(47, 62, 70, 1)
+-------------------------------------
+        Tema: Azul "Glaucous"
+    --cor-base: rgba(100,122,163,1);
+        Cores análogas:
+    --cor-analoga-a: rgba(44,59,87,1);
+    --cor-analoga-b: rgba(170,195,240,1);
+        Cores complementares (contraste):
+    --cor-contraste-a: rgba(87,71,36,1);
+    --cor-contraste-b: rgba(163,143,100,1);
+-------------------------------------
 
+        Tema: Cinza "Ligh State Gray"
+    --cor-base: rgba(125,150,170,1);
+        Cores análogas:
+    --cor-analoga-a: rgba(60,79,94,1);
+    --cor-analoga-b: rgba(208,230,247,1);
+        Cores complementares (contraste):
+    --cor-contraste-a: rgba(94,77,51,1);
+    --cor-contraste-b: rgba(171,153,126,1);
 */
 
 :root {
-    --cor-texto: rgba(47, 62, 70, 1);
-    --cor-fundo: rgba(202, 210, 197, 1);
-    --cor-fundo2: rgba(132, 169, 140, 1);
-    --cor-link: rgba()
+    --cor-base: rgba(100,122,163,1);
+    --cor-analoga-a: rgba(44,59,87,1);
+    --cor-analoga-b: rgba(170,195,240,1);
+    --cor-contraste-a: rgba(87,71,36,1);
+    --cor-contraste-b: rgba(163,143,100,1);
     --font: Tahoma, sans-serif;
 
 }
@@ -25,49 +38,59 @@ rgba(47, 62, 70, 1)
 body {
     margin-top: 3px;
     margin-left: 5px;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-base);
     /* texto */
     font-family: var(--font);
-    color: var(--cor-texto);
+    color: var(--cor-analoga-b);
 }
-
+    /*  CABEÇALHO   */
 .juntardivs {
     display: flex;
 }
-
 .iconecabeca {
     display: inline-block;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     height: 50px;
     width: 50px;
 }
 .titulo {
     display: inline-block;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     height: 20px;
     width: 200px;
     text-align: center;
     padding: 15px;
     font-family: var(--font);
-    color: var(--cor-texto);
+    color: var(--cor-analoga-a);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
 
 }
-.busca {
-    background-color: var(--cor-fundo2);
-    border-radius: 60px;
-    padding: 10px 20px;
-}
-.busca input{
-    background-color: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 4px 5px;
-    font-size: 10px;
-    color: var(--cor-texto);
+h1 {
+    color: var(--cor-analoga-a);
+    text-align: center;
 }
 .sobre-div {
     display: none;
+}
+.post-div {
+    display: none;
+}
+.projeto-div {
+    display: none;
+}
+.contato-div {
+    display: none;
+}
+    /*links*/
+a {
+    color: var(--cor-analoga-b);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--cor-contraste-b);
+    text-decoration: overline underline;
+}
+a:active {
+    color: var(--cor-contraste-a);
 }
