@@ -10,7 +10,7 @@
     --cor-contraste-b: rgba(163,143,100,1);
 -------------------------------------
 
-        Tema: Cinza "Ligh State Gray"
+        Tema: Cinza "Light State Gray"
     --cor-base: rgba(125,150,170,1);
         Cores análogas:
     --cor-analoga-a: rgba(60,79,94,1);
@@ -90,7 +90,9 @@ a {
 a:hover {
     color: var(--cor-contraste-b);
     text-decoration: overline underline;
+    font-weight: bold;
 }
 a:active {
     color: var(--cor-contraste-a);
+    font-weight: bolder;
 }
