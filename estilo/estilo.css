@@ -1,5 +1,5 @@
 /*
--------------------------------------
+--------------------------------------------------
         Tema: Azul "Glaucous"
     --cor-base: rgba(100,122,163,1);
         Cores análogas:
@@ -8,8 +8,7 @@
         Cores complementares (contraste):
     --cor-contraste-a: rgba(87,71,36,1);
     --cor-contraste-b: rgba(163,143,100,1);
--------------------------------------
-
+--------------------------------------------------
         Tema: Cinza "Light State Gray"
     --cor-base: rgba(125,150,170,1);
         Cores análogas:
@@ -18,6 +17,16 @@
         Cores complementares (contraste):
     --cor-contraste-a: rgba(94,77,51,1);
     --cor-contraste-b: rgba(171,153,126,1);
+--------------------------------------------------
+        Tema: Cinza "Space Cadet"
+    --cor-base: rgba(43,45,66,1);
+        Cores análogas:
+    --cor-analoga-a: rgba(79,84,143,1);
+    --cor-analoga-b: rgba(107,110,143,1);
+        Cores complementares (contraste):
+    --cor-contraste-a: rgba(143,126,64,1);
+    --cor-contraste-b: rgba(66,61,43,1);
+--------------------------------------------------
 */
 
 :root {
@@ -27,14 +36,11 @@
     --cor-contraste-a: rgba(87,71,36,1);
     --cor-contraste-b: rgba(163,143,100,1);
     --font: Tahoma, sans-serif;
-
 }
-
 *{
     margin: 0;
     padding: 0;
 }
-
 body {
     margin-top: 3px;
     margin-left: 5px;
@@ -42,6 +48,24 @@ body {
     /* texto */
     font-family: var(--font);
     color: var(--cor-analoga-b);
+}
+h1 {
+    color: var(--cor-analoga-a);
+    text-align: center;
+}
+/*  LINKS   */
+a {
+    color: var(--cor-analoga-b);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--cor-contraste-b);
+    text-decoration: overline underline;
+    font-weight: bold;
+}
+a:active {
+    color: var(--cor-contraste-a);
+    font-weight: bolder;
 }
     /*  CABEÇALHO   */
 .juntardivs {
@@ -64,11 +88,7 @@ body {
     color: var(--cor-analoga-a);
     font-weight: 700;
     font-size: 14px;
-
-}
-h1 {
-    color: var(--cor-analoga-a);
-    text-align: center;
+    /*  DIVS DE CONTEÚDO    */
 }
 .sobre-div {
     display: none;
@@ -81,18 +101,4 @@ h1 {
 }
 .contato-div {
     display: none;
-}
-    /*links*/
-a {
-    color: var(--cor-analoga-b);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--cor-contraste-b);
-    text-decoration: overline underline;
-    font-weight: bold;
-}
-a:active {
-    color: var(--cor-contraste-a);
-    font-weight: bolder;
 }
