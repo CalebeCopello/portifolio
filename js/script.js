@@ -1,23 +1,23 @@
 function show(a) {
-    document.getElementById('home-div').style.display = "none"
-    document.getElementById('sobre-div').style.display = "none"
-    document.getElementById('post-div').style.display = "none"
-    document.getElementById('projeto-div').style.display = "none"
-    document.getElementById('contato-div').style.display = "none"
+    document.getElementById('home').style.display = "none"
+    document.getElementById('sobre').style.display = "none"
+    document.getElementById('post').style.display = "none"
+    document.getElementById('projeto').style.display = "none"
+    document.getElementById('contato').style.display = "none"
     switch(a) {
         case 'home':
-            document.getElementById('home-div').style.display = "inline";
+            document.getElementById('home').style.display = "inline";
             break;
         case 'sobre':
-            document.getElementById('sobre-div').style.display = "inline";
+            document.getElementById('sobre').style.display = "inline";
             break;
         case 'post':
-            document.getElementById('post-div').style.display = "inline";
+            document.getElementById('post').style.display = "inline";
             break;
         case 'projeto':
-            document.getElementById('projeto-div').style.display = "inline";
+            document.getElementById('projeto').style.display = "inline";
             break;
         case 'contato':
-            document.getElementById('contato-div').style.display = "inline";
+            document.getElementById('contato').style.display = "inline";
     }
 }
