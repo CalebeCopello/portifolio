@@ -44,9 +44,7 @@
     padding: 0;
 }
 body {
-    margin-top: 3px;
-    margin-left: 5px;
-    background-color: var(--cor-base);
+    background-color: var(--cor-contraste-b);
     /* texto */
     font-family: var(--font-sans-serif);
     color: var(--cor-analoga-b);
@@ -59,9 +57,11 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     padding: 1rem;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.411);
 }
 h2 {
     padding: 5rem;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.411);
 }
 p {
     text-align: justify;
@@ -82,6 +82,7 @@ a:active {
 }
     /*  CABEÇALHO   */
 header {
+    background-image: linear-gradient(to bottom, var(--cor-base), var(--cor-analoga-a));
     position: sticky;
     top: 0;
     display: inline-flex;
@@ -110,8 +111,19 @@ nav {
     color: var(--cor-analoga-b);
     font-weight: 700;
     font-size: 0.75em;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.411);
 }
 /*  CONTEÚDO    */
+main {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 3rem;
+    padding: 0rem 3rem 3rem 3rem;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.479);
+    background-color: var(--cor-base);
+    border-radius: 0px 0px 7px 7px;
+}
 .sobre {
     display: none;
 }
@@ -126,11 +138,11 @@ nav {
 }
 /* FOOTER */
 footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     background-color: var(--cor-analoga-a);
-    width: 98%;
-    padding: 0.75rem;
+    width: 100%;
+    padding: 0.3rem;
     font-family: var(--font-serif);
     text-align: center;
 }
