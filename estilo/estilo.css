@@ -87,14 +87,15 @@ header {
     top: 0;
     display: inline-flex;
     width: 100%;
-    background-color: var(--cor-analoga-a);
 }
 nav {
     position: absolute;
-    height: 1rem;
+    top: 0.1rem;
+    height: 0.5rem;
     right: 0px;
-    padding: 0.7rem;
+    padding: 0.3rem;
     font-size: 0.75em;
+    line-height: 0.5rem;
 }
 .iconecabeca {
     filter: opacity(70%) invert(1);
@@ -112,6 +113,29 @@ nav {
     font-weight: 700;
     font-size: 0.75em;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.411);
+}
+.tema {
+    position: absolute;
+    right: 0px;
+    top: 1.5rem;
+    font-size: 0.8rem;
+    font-family: var(--font-sans-serif);
+}
+.tema-tema {
+    position: absolute;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.493);
+    top: -0.1rem;
+    right: 3.2rem;
+}
+.glaucous {
+    accent-color: rgba(100,122,163,1);
+}
+.lightStateGray {
+    accent-color: rgba(125,150,170,1);
+}
+.spaceCadet {
+    accent-color: rgba(43,45,66,1);
 }
 /*  CONTEÚDO    */
 main {

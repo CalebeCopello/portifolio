@@ -27,8 +27,11 @@
             <a href="javascript:show('projeto')">Projetos</a>
             <a href="javascript:show('contato')">Contato</a>
         </nav>
-        <form action="tema">
-<input type="button" value="tema" onclick="tema()">
+        <form action="" class="tema">
+            <span class="tema-tema">Tema:</span>
+            <input type="radio" value="Glaucous" class="glaucous" onclick="tema('glaucous')" checked>
+            <input type="radio" value="Light State Gray" class="lightStateGray" onclick="tema('lightStateGray')" checked>
+            <input type="radio" value="Space Cadet" class="spaceCadet" onclick="tema('spaceCadet')" checked>
         </form>
     </header>
     <main>
