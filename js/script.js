@@ -21,3 +21,8 @@ function show(a) {
             document.getElementById('contato').style.display = "inline";
     }
 }
+function tema() {
+    var getRoot = document.querySelector(':root')
+    var selectRoot = window.getComputedStyle(getRoot)
+    window.alert(selectRoot.getPropertyValue('--cor-base'))
+}
