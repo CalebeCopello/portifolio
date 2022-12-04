@@ -1,15 +1,6 @@
 /*
 --------------------------------------------------
-        Tema: Azul "Glaucous"
-    --cor-base: rgba(100,122,163,1);
-        Cores análogas:
-    --cor-analoga-a: rgba(44,59,87,1);
-    --cor-analoga-b: rgba(170,195,240,1);
-        Cores complementares (contraste):
-    --cor-contraste-a: rgba(87,71,36,1);
-    --cor-contraste-b: rgba(163,143,100,1);
---------------------------------------------------
-        Tema: Cinza "Light State Gray"
+        Tema: "Light State Gray"
     --cor-base: rgba(125,150,170,1);
         Cores análogas:
     --cor-analoga-a: rgba(60,79,94,1);
@@ -18,24 +9,33 @@
     --cor-contraste-a: rgba(94,77,51,1);
     --cor-contraste-b: rgba(171,153,126,1);
 --------------------------------------------------
-        Tema: Cinza "Space Cadet"
-    --cor-base: rgba(43,45,66,1);
+        Tema: "Sage"
+    --cor-base: rgba(202,202,170,1);
         Cores análogas:
-    --cor-analoga-a: rgba(79,84,143,1);
-    --cor-analoga-b: rgba(107,110,143,1);
+    --cor-analoga-b: rgba(255,255,229,1);
+    --cor-analoga-a: rgba(117,117,117,1);
         Cores complementares (contraste):
-    --cor-contraste-a: rgba(143,126,64,1);
-    --cor-contraste-b: rgba(66,61,43,1);
+    --cor-contraste-a: rgba(102,80,125,1);
+    --cor-contraste-b: rgba(185,169,201,1);
+--------------------------------------------------
+        Tema: "Onyx""
+    --cor-base: rgba(69,69,69,1);
+        Cores análogas:
+    --cor-analoga-a: rgb(42, 42, 42);
+    --cor-analoga-b: rgba(153,153,153,1);
+        Cores complementares (contraste):
+    --cor-contraste-a: rgb(145, 135, 116);
+    --cor-contraste-b: rgb(68, 79, 107);
 --------------------------------------------------
 */
 @charset "UTF-8";
 
 :root {
-    --cor-base: rgba(100,122,163,1);
-    --cor-analoga-a: rgba(44,59,87,1);
-    --cor-analoga-b: rgba(170,195,240,1);
-    --cor-contraste-a: rgba(87,71,36,1);
-    --cor-contraste-b: rgba(163,143,100,1);
+    --cor-base: rgba(125,150,170,1);
+    --cor-analoga-a: rgba(60,79,94,1);
+    --cor-analoga-b: rgba(208,230,247,1);
+    --cor-contraste-a: rgba(94,77,51,1);
+    --cor-contraste-b: rgba(171,153,126,1);
     --font-sans-serif: Tahoma, Arial, sans-serif;
     --font-serif: Georgia, 'Times New Roman', Times, serif;
 }
@@ -72,13 +72,9 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: var(--cor-contraste-b);
+    color: var(--cor-contraste-a);
     text-decoration: overline underline;
     font-weight: bold;
-}
-a:active {
-    color: var(--cor-contraste-a);
-    font-weight: bolder;
 }
     /*  CABEÇALHO   */
 header {
@@ -98,7 +94,7 @@ nav {
     line-height: 0.5rem;
 }
 .iconecabeca {
-    filter: opacity(70%) invert(1);
+    filter: opacity(60%) invert(0);
     width: 3rem; 
     height: 3rem;
     margin: -0.1rem 0rem 0rem 0.2rem;
@@ -128,14 +124,14 @@ nav {
     top: -0.1rem;
     right: 3.2rem;
 }
-.glaucous {
-    accent-color: rgba(100,122,163,1);
-}
 .lightStateGray {
     accent-color: rgba(125,150,170,1);
 }
-.spaceCadet {
-    accent-color: rgba(43,45,66,1);
+.sage {
+    accent-color: rgba(202,202,170,1);
+}
+.onyx {
+    accent-color: rgba(69,69,69,1);
 }
 /*  CONTEÚDO    */
 main {
