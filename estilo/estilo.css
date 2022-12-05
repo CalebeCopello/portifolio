@@ -73,8 +73,6 @@ a {
 }
 a:hover {
     color: var(--cor-contraste-a);
-    text-decoration: overline underline;
-    font-weight: bold;
 }
     /*  CABEÇALHO   */
 header {

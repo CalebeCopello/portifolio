@@ -21,7 +21,6 @@ function show(a) {
             document.getElementById('contato').style.display = "inline";
     }
 }
-//mudar a cor do icone, escuro para os dois primeiros, claro para o ultimo
 function tema(tema) {
     var getRoot = document.querySelector(':root')
     var icone = document.querySelector('.iconecabeca')
