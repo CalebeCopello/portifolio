@@ -66,6 +66,9 @@ h2 {
 p {
     text-align: justify;
 }
+.center {
+    text-align: center;
+}
 /*  LINKS   */
 a {
     color: var(--cor-analoga-b);
@@ -133,7 +136,7 @@ nav {
 }
 /*  CONTEÚDO    */
 main {
-    max-width: 1000px;
+    max-width: 1700px;
     min-width: 300px;
     margin: auto;
     margin-bottom: 3rem;
@@ -142,6 +145,37 @@ main {
     background-color: var(--cor-base);
     border-radius: 0px 0px 7px 7px;
 }
+/*  HOME */
+.h-guestbook {
+    padding: 0;
+    text-align: center;
+}
+.recado-guestbook {
+    display: block;
+    height: 300px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--cor-contraste-b);
+    border: 1px dashed black;
+    border-radius: 0.3rem;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.521);
+}
+.form-guestbook {
+    display: block;
+    border: 1px dashed black;
+
+}
+.nome-guestbook {
+    display: inline-block;
+    margin: 0.5rem;
+    border: 1px dashed black;
+}
+.email-guestbook {
+    display: inline-block;
+    margin: 0.5rem;
+    border: 1px dashed black;
+}
+
 .sobre {
     display: none;
 }

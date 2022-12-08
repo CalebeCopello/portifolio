@@ -38,7 +38,29 @@
         <!-- Conteúdo Home -->
         <article class="home" id="home">
             <h1>BEM-VINDO</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis pariatur perspiciatis architecto iusto atque cum repellendus placeat impedit ex. Ex eaque ipsam explicabo ab illo. Animi rem sequi officia qui.</p>
+            <p>Seja bem vindo ao BLOG!</p>
+            <h2 class="h-guestbook">GuestBook</h2>
+            <div class="recado-guestbook">
+                &lt;Posts.php&gt;
+            </div>
+            <p class="center">Deixe seu Recado.</p>
+            <form action="postgb.php" method="post" class="form-guestbook">
+                <div class="nome-guestbook">
+                    <label for="gbnome">Nome: </label>
+                    <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20">
+                </div>
+                <div class="email-guestbook">
+                    <label for="gbemail">Email: </label>
+                    <input type="email" name="email" id="gbemail" placeholder="(máximo de 50 caracteres)" maxlength="50" size="20">
+                </div>
+                <div class="texto-guestbook">
+                    <label for="gbtexto">Recado: </label>
+                    <textarea name="texto" id="gbtexto" rows="5" cols="55" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350"></textarea>
+                </div>
+                <div class="botao-guestbook">
+                    <input type="submit" value="Enviar Recado">
+                </div>
+            </form>
         </article>
         <!-- Conteúdo Sobre Mim -->
         <article class="sobre" id="sobre">
