@@ -20,13 +20,16 @@
             Calebe Copello's Dev BLOG
         </div>
     <!-- MENU -->
-        <nav>
-            <a href="javascript:show('home')">Home</a>
-            <a href="javascript:show('sobre')">Sobre Mim</a>
-            <a href="javascript:show('post')">Meus Posts</a>
-            <a href="javascript:show('projeto')">Projetos</a>
-            <a href="javascript:show('contato')">Contato</a>
-        </nav>
+        <menu>
+            <ul>
+                <li><a href="javascript:show('home')">Home</a></li>
+                <li><a href="javascript:show('sobre')">Sobre Mim</a></li>
+                <li><a href="javascript:show('post')">Meus Posts</a></li>
+                <li><a href="javascript:show('projeto')">Projetos</a></li>
+                <li><a href="javascript:show('contato')">Contato</a></li>
+            </ul>
+            <img src="/imgs/cross-from-freepik.png" alt="Icone em 'x' para fechar menu, criador Freepik" class="iconemenu" id="iconemenu" onclick="menu()">
+        </menu>
         <form action="" class="tema">
             <span class="tema-tema">Tema:</span>
             <input type="radio" value="Light State Gray" class="lightStateGray" onclick="tema('lightStateGray')" checked>
