@@ -51,15 +51,21 @@ function tema(tema) {
             icone.style.filter="invert(1) opacity(60%)";
     } 
 }
-function menu() {
+function menu(op) {
     var getMenu = document.querySelector('menu > ul');
     var getMenuIcon = document.getElementById('iconemenu');
-    if (getMenu.style.visibility == 'visible' || getMenu.style.visibility == '') {
+    if (getMenu.style.visibility == 'visible' || getMenu.style.visibility == '' || op == 'esconde') {
         getMenu.style.visibility = "hidden";
         getMenuIcon.src="/imgs/menu-burger-from-freepik.png";
     }
     else {
         getMenu.style.visibility = "visible";
         getMenuIcon.src="/imgs/cross-from-freepik.png"
+    }
+}
+function size() {
+    windowWidth = window.innerWidth;
+    if (windowWidth <= 650) {
+        menu('esconde');
     }
 }
