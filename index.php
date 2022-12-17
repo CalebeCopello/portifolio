@@ -44,7 +44,8 @@
             <p>Seja bem vindo ao BLOG!</p>
             <h2 class="h-guestbook">GuestBook</h2>
             <div class="recado-guestbook">
-                &lt;Posts.php&gt;
+                <!-- <iframe src="/gb.php" style="width:100%; height:100%; border: 1px dashed red;;"></iframe> -->
+                <?php include 'gb.php'; ?>
             </div>
             <p class="center">Deixe seu Recado.</p>
             <form action="postgb.php" method="post" class="form-guestbook">

@@ -106,24 +106,6 @@ menu > ul > li {
     top: -0.138rem;
     left: -0.1rem;
 }
-/*TO DO  fazer uma div que aumenta no exito x e muda a opacidade para 0.5 quando hover */
-.menuAnimation {
-    display: inline-block;
-    position: absolute;
-    background-color: white;
-    width: 1rem;
-    height: 0.7rem;
-    opacity: 1;
-}
-.menuAnimation:hover {
-    transition: width 1s;
-    transform: scaleX(1);
-    animation: fadeIn 0.5s linear;
-}
-@keyframes fadeIn {
-    from {opacity: 1;}
-    to {opacity: 0;}
-}
 .iconemenu {
     filter: opacity(60%) invert(0);
     width: 0.7rem;
@@ -203,6 +185,7 @@ main {
     border: 1px dashed black;
     border-radius: 0.3rem;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.521);
+    overflow: auto;
 }
 .form-guestbook {
     display: block;
