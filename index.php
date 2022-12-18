@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="estilo/estilo.css">
 </head>
 <body onresize="size()">
-<!-- CABEÇALHO -->
+    <!-- CABEÇALHO -->
     <header>
         <img src="imgs/system-from-freepik.png" alt="Icone janela desenvolvedor, criador Freepik"  class="iconecabeca">
         <div class="titulo">
             Calebe Copello's Dev BLOG
         </div>
-    <!-- MENU -->
+        <!-- MENU -->
         <menu>
             <ul>
                 <li><a href="javascript:show('home')"><div class="menuAnimation"></div>Home</a></li>
@@ -88,7 +88,7 @@
             <h1>PROJETOS</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, mollitia iusto ea ut velit minima maiores eaque, laudantium id provident deserunt voluptatibus ex at perferendis nostrum dolores atque quasi reprehenderit!</p>
         </section>
-            <!-- Conteúdo Contato -->
+        <!-- Conteúdo Contato -->
         <section class="contato" id="contato">
             <h1>CONTATO</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, mollitia iusto ea ut velit minima maiores eaque, laudantium id provident deserunt voluptatibus ex at perferendis nostrum dolores atque quasi reprehenderit!</p>

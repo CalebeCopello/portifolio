@@ -8,7 +8,7 @@
     <meta name="keywords" content="Blog,Desenvolvimento,Portifolio">
     <meta name="author" content="Calebe Copello">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
-    <title>Guest Book</title>
+    <title>Adicionar Comentário</title>
 </head>
 <body>
 <?php 
@@ -19,13 +19,16 @@
         echo 'Falha ao conectar no banco de dados, Erro:' . mysqli_connect_error();
         exit();
     }
-    $sql_select = 'SELECT id, usuario, comentario, data FROM gb';
-    $sql_return = mysqli_query($sql_con, $sql_select);
-    while ($sql_row = mysqli_fetch_assoc($sql_return)) {
-    echo 'ID ='.$sql_row['id'].'<br>Usuário ='.$sql_row['usuario'].'<br>Comentário ='.$sql_row['comentario'].'<br>Data ='.$sql_row['data'];
+    $total = 0;
+    //TO DO usar prepare para inserir data com variaveis
+    while($total < 5) {
+        $lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia accusamus sint itaque iusto tempora corporis, repellendus, rerum iure labore nobis quod nostrum aliquam recusandae illo impedit. Consectetur, recusandae rem.';
+        $data = date('Y-m-d H:i:s', time());
+        $sql_insert = 'INSERT INTO gb (usuario, comentario, data, ip) VALUES ("Usuário" , '.$lorem.' , "2022-12-17 00:00:00", "127.0.0.1")';
+        mysqli_query($sql_con, $sql_insert);
+        echo $sql_insert.'<br>';
+        $total++;
     }
-    $data = date('Y-m-d H:i:s', time());
-    echo '<br>'.$data;
 ?>
 </body>
 </html>
