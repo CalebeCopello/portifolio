@@ -19,16 +19,22 @@
         echo 'Falha ao conectar no banco de dados, Erro:' . mysqli_connect_error();
         exit();
     }
+    mysqli_set_charset($sql_con, 'utf8');
     $total = 0;
     //TO DO usar prepare para inserir data com variaveis
     while($total < 5) {
         $lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia accusamus sint itaque iusto tempora corporis, repellendus, rerum iure labore nobis quod nostrum aliquam recusandae illo impedit. Consectetur, recusandae rem.';
         $data = date('Y-m-d H:i:s', time());
-        $sql_insert = 'INSERT INTO gb (usuario, comentario, data, ip) VALUES ("Usuário" , '.$lorem.' , "2022-12-17 00:00:00", "127.0.0.1")';
-        mysqli_query($sql_con, $sql_insert);
+        $ip = '127.0.0.1';
+        $usuario = 'Usuário'.$total;
+        $sql_insert = 'INSERT INTO gb (usuario, comentario, data, ip) VALUES (? , ? , ?, ?)';
+        $stmt = mysqli_prepare($sql_con, $sql_insert);
+        mysqli_stmt_bind_param($stmt, 'ssss', $usuario, $lorem, $data, $ip);
+        mysqli_stmt_execute($stmt);
         echo $sql_insert.'<br>';
         $total++;
     }
+    mysqli_close($sql_con);
 ?>
 </body>
 </html>
