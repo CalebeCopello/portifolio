@@ -1,6 +1,7 @@
 <?php
 class clientInfo {
     private $ip;
+    private $ipExtra;
     private $browser;
     private $os;
     private $language;
@@ -12,11 +13,14 @@ class clientInfo {
     function __construct() {
         //**IP
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-            $this->ip = $_SERVER['HTTP_CLIENT_IP'].' parte de uma rede compartilhada';
+            $this->ip = $_SERVER['HTTP_CLIENT_IP'];
+            $this->ipExtra = 'Parte de uma rede compartilhada';
         } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $this->ip = $_SERVER['HTTP_X_FORWARDED_FOR'].' vindo de um servidor de proxy';
+            $this->ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            $this->ipExtra = 'Vindo de um servidor de proxy';
         } else { 
-            $this->ip = $_SERVER['REMOTE_ADDR'].' cliente remoto';
+            $this->ip = $_SERVER['REMOTE_ADDR'];
+            $this->ipExtra = 'Cliente remoto';
         }
         //**Browser
         $user_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -122,6 +126,7 @@ class clientInfo {
         $this->language = locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE']);
         //**GeoPlugin
         $ip = '179.189.152.132'; //IP para exemplificar
+        //$ip = $this->ip;
         $geo = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$ip));
         //*Country
         $this->countryName = $geo['geoplugin_countryName'];
@@ -132,8 +137,13 @@ class clientInfo {
         //*City
         $this->city = $geo['geoplugin_city'];
     }
-    function getIP(){
-        return $this->ip;
+    //TODO ajudar para quando as variaveis estiverem vazias!
+    function getIP($a =''){
+        if ($a == 'extra') {
+            return $this->ip.'('.$this->ipExtra.')'; 
+        } else {
+            return $this->ip;
+        }
     }
     function getBrowser() {
         return $this->browser;
@@ -167,7 +177,7 @@ class clientInfo {
     }
 }
 $client = new clientInfo();
-echo 'IP = '.$client->getIP().'<br>';
+echo 'IP = '.$client->getIP('extra').'<br>';
 echo 'Browser = '.$client->getBrowser().'<br>';
 echo 'OS = '.$client->getOS().'<br>';
 echo 'Língua = '.$client->getLanguage().'<br>';
