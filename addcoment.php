@@ -21,7 +21,6 @@
     }
     mysqli_set_charset($sql_con, 'utf8');
     $total = 0;
-    //TO DO usar prepare para inserir data com variaveis
     while($total < 5) {
         $lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia accusamus sint itaque iusto tempora corporis, repellendus, rerum iure labore nobis quod nostrum aliquam recusandae illo impedit. Consectetur, recusandae rem.';
         $data = date('Y-m-d H:i:s', time());

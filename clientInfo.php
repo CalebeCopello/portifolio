@@ -10,6 +10,7 @@ class clientInfo {
     private $stateName;
     private $stateCode;
     private $city;
+    private $jsDate;
     function __construct() {
         //**IP
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -136,6 +137,12 @@ class clientInfo {
         $this->stateCode = $geo['geoplugin_regionCode'];
         //*City
         $this->city = $geo['geoplugin_city'];
+        //*Date From JS
+        if (isset($_POST['data'])) {
+            $this->jsDate = $_POST['data'];
+        } else {
+            $this->jsDate = 'Não definido';
+        }
     }
     //TODO ajudar para quando as variaveis estiverem vazias!
     function getIP($a =''){
@@ -175,6 +182,9 @@ class clientInfo {
     function getCity () {
         return $this->city;
     }
+    function getDate() {
+        return $this->jsDate;
+    }
 }
 $client = new clientInfo();
 echo 'IP = '.$client->getIP('extra').'<br>';
@@ -184,4 +194,5 @@ echo 'Língua = '.$client->getLanguage().'<br>';
 echo 'Pais = '.$client->getCountry().'<br>';
 echo 'Estado = '.$client->getState().'<br>';
 echo 'Cidade = '.$client->getCity().'<br>';
+echo 'Data = '.$client->getDate().'<br>';
 ?>
