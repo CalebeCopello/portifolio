@@ -49,14 +49,14 @@
             echo 'Banco de Dados não encontrado! Criando Bando de Dados.';
             mysqli_query($sqlCon, '
             CREATE DATABASE gnrldb 
-            DEFAULT CHARACTER SET utf8
-            DEFAULT COLLATE utf8_general_ci
+            DEFAULT CHARACTER SET utf8mb4
+            DEFAULT COLLATE utf8mb4_general_ci
             ');
         } else {
             die('Conexão falhou: '. mysqli_connect_error(). ' Erro nº: '. mysqli_connect_errno());
         }
     }
-
+    mysqli_set_charset($sqlConDB, 'utf8mb4');
 ?>
 </body>
 </html>

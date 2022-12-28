@@ -47,7 +47,7 @@
                 <?php include 'gb.php'; ?>
             </div>
             <p class="center">Deixe seu Recado.</p>
-            <form action="postgb.php" method="post" class="form-guestbook">
+            <form action="/addcoment.php" method="post" class="form-guestbook">
                 <div class="nome-guestbook">
                     <label for="gbnome">Nome: </label>
                     <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20">

@@ -11,20 +11,32 @@
     <title>Guest Book</title>
 </head>
 <body>
-<?php 
-    $sql_info = array('localhost', 'root', '', 'guestbook');
-    $sql_con = mysqli_connect($sql_info[0], $sql_info[1], $sql_info[2], $sql_info[3]); 
-    //check connection
-    if (mysqli_connect_error()) {
-        echo 'Falha ao conectar no banco de dados, Erro:' . mysqli_connect_error();
-        exit();
-    }
-    mysqli_set_charset($sql_con, 'utf8');
-    $sql_select = 'SELECT id, usuario, comentario, data FROM gb';
+<?php
+    require 'mysql.php';
+    //require 'clientInfo.php';
+    mysqli_query($sqlConDB,'
+    CREATE TABLE IF NOT EXISTS gb (
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        nome varchar(30) NOT NULL,
+        email varchar(50) NOT NULL,
+        recado text(350) NOT NULL,
+        browser varchar(30) NOT NULL,
+        os varchar(15) NOT NULL,
+        lingua varchar(20) NOT NULL,
+        ip varchar(50) NOT NULL,
+        pais varchar(50) NOT NULL,
+        estado varchar(70) NOT NULL,
+        cidade varchar(70) NOT NULL,
+        dataclient varchar(40) NOT NULL,
+        dataserver varchar(40) NOT NULL
+        ) default charset = utf8mb4;
+    ');
+/*  $sql_select = 'SELECT id, usuario, comentario, data FROM gb';
     $sql_return = mysqli_query($sql_con, $sql_select);
     while ($sql_row = mysqli_fetch_assoc($sql_return)) {
     echo 'ID ='.$sql_row['id'].'<br>Usuário ='.$sql_row['usuario'].'<br>Comentário ='.$sql_row['comentario'].'<br>Data ='.$sql_row['data'].'<br>';
     }
+*/
     $data = date('Y-m-d H:i:s', time());
     echo '<br>'.$data;
 ?>
