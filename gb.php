@@ -9,10 +9,9 @@
     <meta name="author" content="Calebe Copello">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
     <title>Guest Book</title>
-    <link rel="stylesheet" href="estilo/gb.css">
 </head>
 <body>
-<h2 class="h-guestbook">GuestBook</h2>
+<h1>GuestBook</h1>
 <?php
     require 'mysql.php';
     //require 'clientInfo.php';
@@ -37,7 +36,13 @@
     $sqlSelect = 'SELECT avatar, nome, recado, dataserver FROM gb';
     $sqlReturn = mysqli_query($sqlConDB, $sqlSelect);
     while ($sqlRow = mysqli_fetch_assoc($sqlReturn)) {
-    echo '<img src ="imgs/avatars/user'.$sqlRow['avatar'].'.png"> '.$sqlRow['nome'].'<br>Recado ='.$sqlRow['recado'].'<br>Data ='.$sqlRow['dataserver'].'<br>';
+    echo '
+    <div class="div-recado-guestbook">
+        <img src="imgs/avatars/user'.$sqlRow['avatar'].'.png" class="avatar-guestbook">
+        '.$sqlRow['nome'].'<br>
+        Recado ='.$sqlRow['recado'].'<br>
+        Data ='.$sqlRow['dataserver'].'<br>
+        </div>';
     }
 ?>
 </body>

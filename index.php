@@ -42,7 +42,9 @@
         <section class="home" id="home">
             <h1>BEM-VINDO</h1>
             <p>Seja bem vindo ao BLOG!</p>
-                <iframe src="gb.php" frameborder="0"></iframe>
+                <div class="iframe-div">
+                    <iframe src="gb.php" frameborder="0" class="iframe-guestbook" id="iframe-guestbook"></iframe>
+                </div>
             <p class="center">Deixe seu Recado.</p>
             <form action="/addcoment.php" method="post" class="form-guestbook">
                 <div class="avatar-guestbook">
@@ -57,7 +59,7 @@
                 </div>
                 <div class="texto-guestbook">
                     <label for="gbtexto">Recado: </label>
-                    <textarea name="texto" id="gbtexto" rows="5" cols="55" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350"></textarea>
+                    <textarea name="texto" id="gbtexto" rows="7" cols="50" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350"></textarea>
                 </div>
                 <div class="botao-guestbook">
                     <input type="submit" value="Enviar Recado">
@@ -95,7 +97,7 @@
     <footer>
         Produzido e Desenvolvido por <a href="https://github.com/CalebeCopello" target="_blank">Calebe Copello</a>.
     </footer>
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>    
+    <!-- JavaScript --> 
+    <script src="js/script2.js"></script> 
 </body>
 </html>

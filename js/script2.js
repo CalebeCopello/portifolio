@@ -1,3 +1,4 @@
+window.alert('teste');
 function show(a) {
     document.getElementById('home').style.display = "none";
     document.getElementById('sobre').style.display = "none";
@@ -24,6 +25,7 @@ function show(a) {
 function tema(tema) {
     var getRoot = document.querySelector(':root');
     var icone = document.querySelector('.iconecabeca');
+    var iFrame = document.getElementById('iframe-guestbook');
     switch(tema){
         case 'lightStateGray':
             getRoot.style.setProperty('--cor-base', 'rgba(125,150,170,1)');
@@ -49,7 +51,7 @@ function tema(tema) {
             getRoot.style.setProperty('--cor-contraste-b','rgba(68,79,107,1)');
             var icone = document.querySelector('.iconecabeca');
             icone.style.filter="invert(1) opacity(60%)";
-    } 
+    }
 }
 function menu(op) {
     var getMenu = document.querySelector('menu > ul');

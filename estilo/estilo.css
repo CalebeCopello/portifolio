@@ -176,21 +176,27 @@ main {
     padding: 0;
     text-align: center;
 }
-.recado-guestbook {
+.iframe-div {
+    position: relative;
+    min-width: 250px;
+    max-width: 1600px;
+    height: 500px;
+    margin: 0.5rem;
+}
+.iframe-guestbook {
     display: block;
-    height: 300px;
-    padding: 1rem;
-    margin: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-color: var(--cor-contraste-b);
-    border: 1px dashed black;
     border-radius: 0.3rem;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.521);
-    overflow: auto;
 }
 .form-guestbook {
     display: block;
     border: 1px dashed black;
-
 }
 .nome-guestbook {
     display: inline-block;
@@ -200,6 +206,11 @@ main {
 .email-guestbook {
     display: inline-block;
     margin: 0.5rem;
+    border: 1px dashed black;
+}
+.div-recado-guestbook {
+    display: block;
+    position: absolute;
     border: 1px dashed black;
 }
 
