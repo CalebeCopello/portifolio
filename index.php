@@ -42,12 +42,11 @@
         <section class="home" id="home">
             <h1>BEM-VINDO</h1>
             <p>Seja bem vindo ao BLOG!</p>
-            <h2 class="h-guestbook">GuestBook</h2>
-            <div class="recado-guestbook">
-                <?php include 'gb.php'; ?>
-            </div>
+                <iframe src="gb.php" frameborder="0"></iframe>
             <p class="center">Deixe seu Recado.</p>
             <form action="/addcoment.php" method="post" class="form-guestbook">
+                <div class="avatar-guestbook">
+                </div>
                 <div class="nome-guestbook">
                     <label for="gbnome">Nome: </label>
                     <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20">

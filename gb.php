@@ -9,8 +9,10 @@
     <meta name="author" content="Calebe Copello">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
     <title>Guest Book</title>
+    <link rel="stylesheet" href="estilo/gb.css">
 </head>
 <body>
+<h2 class="h-guestbook">GuestBook</h2>
 <?php
     require 'mysql.php';
     //require 'clientInfo.php';
@@ -19,6 +21,7 @@
         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         nome varchar(30) NOT NULL,
         email varchar(50) NOT NULL,
+        avatar char(2) NOT NULL,
         recado text(350) NOT NULL,
         browser varchar(30) NOT NULL,
         os varchar(15) NOT NULL,
@@ -31,14 +34,11 @@
         dataserver varchar(40) NOT NULL
         ) default charset = utf8mb4;
     ');
-/*  $sql_select = 'SELECT id, usuario, comentario, data FROM gb';
-    $sql_return = mysqli_query($sql_con, $sql_select);
-    while ($sql_row = mysqli_fetch_assoc($sql_return)) {
-    echo 'ID ='.$sql_row['id'].'<br>Usuário ='.$sql_row['usuario'].'<br>Comentário ='.$sql_row['comentario'].'<br>Data ='.$sql_row['data'].'<br>';
+    $sqlSelect = 'SELECT avatar, nome, recado, dataserver FROM gb';
+    $sqlReturn = mysqli_query($sqlConDB, $sqlSelect);
+    while ($sqlRow = mysqli_fetch_assoc($sqlReturn)) {
+    echo '<img src ="imgs/avatars/user'.$sqlRow['avatar'].'.png"> '.$sqlRow['nome'].'<br>Recado ='.$sqlRow['recado'].'<br>Data ='.$sqlRow['dataserver'].'<br>';
     }
-*/
-    $data = date('Y-m-d H:i:s', time());
-    echo '<br>'.$data;
 ?>
 </body>
 </html>

@@ -14,15 +14,26 @@
 <?php 
     require 'mysql.php';
     require 'clientInfo.php';
-    echo $_POST['texto'];
-    $data = date('Y-m-d H:i:s', time());
-    /* $sql_insert = 'INSERT INTO gb (usuario, comentario, data, ip) VALUES (? , ? , ?, ?)';
-    $stmt = mysqli_prepare($sql_con, $sql_insert);
-    mysqli_stmt_bind_param($stmt, 'ssss', $usuario, $lorem, $data, $ip);
+    $nome = $_POST['nome'];
+    //TODO colocar a escolha do avatar
+    $avatar = '02';
+    $email = $_POST['email'];
+    $recado = $_POST['texto'];
+    $ip = $client->getIP('extra');
+    $browser = $client->getBrowser();
+    $os = $client->getOS();
+    $lingua = $client->getLanguage();
+    $pais = $client->getCountry();
+    $estado = $client->getState();
+    $cidade = $client->getCity();
+    $dataclient = $client->getDate();
+    $dataserver = date('Y-m-d', time());
+    $sqlInsert = 'INSERT INTO gb (nome, avatar, email, recado, ip, browser, os, lingua, pais, estado, cidade, dataclient, dataserver) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)';
+    //mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    $stmt = mysqli_prepare($sqlConDB, $sqlInsert);
+    mysqli_stmt_bind_param($stmt, 'sssssssssssss', $nome, $avatar, $email, $recado, $ip, $browser, $os, $lingua, $pais, $estado, $cidade, $dataclient, $dataserver);
     mysqli_stmt_execute($stmt);
-    echo $sql_insert.'<br>';
-    $total++;
-    mysqli_close($sql_con);*/
+    mysqli_close($sqlConDB);
 ?>
 </body>
 </html>
