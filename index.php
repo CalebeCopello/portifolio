@@ -47,21 +47,21 @@
                 </div>
             <p class="center">Deixe seu Recado.</p>
             <form action="/addcoment.php" method="post" class="form-guestbook">
-                <div class="avatar-guestbook">
+                <div class="avatar-guestbook-form">
                 </div>
-                <div class="nome-guestbook">
+                <div class="nome-guestbook-form">
                     <label for="gbnome">Nome: </label>
                     <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20">
                 </div>
-                <div class="email-guestbook">
+                <div class="email-guestbook-form">
                     <label for="gbemail">Email: </label>
                     <input type="email" name="email" id="gbemail" placeholder="(máximo de 50 caracteres)" maxlength="50" size="20">
                 </div>
-                <div class="texto-guestbook">
+                <div class="texto-guestbook-form">
                     <label for="gbtexto">Recado: </label>
-                    <textarea name="texto" id="gbtexto" rows="7" cols="50" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350"></textarea>
+                    <textarea name="texto" id="gbtexto" rows="7" cols="45" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350"></textarea>
                 </div>
-                <div class="botao-guestbook">
+                <div class="botao-guestbook-form">
                     <input type="submit" value="Enviar Recado">
                 </div>
             </form>
@@ -98,6 +98,6 @@
         Produzido e Desenvolvido por <a href="https://github.com/CalebeCopello" target="_blank">Calebe Copello</a>.
     </footer>
     <!-- JavaScript --> 
-    <script src="js/script2.js"></script> 
+    <script src="js/scripts.js"></script> 
 </body>
 </html>

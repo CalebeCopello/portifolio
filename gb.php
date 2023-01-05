@@ -8,6 +8,7 @@
     <meta name="keywords" content="Blog,Desenvolvimento,Portifolio">
     <meta name="author" content="Calebe Copello">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo/estilo.css">
     <title>Guest Book</title>
 </head>
 <body>
@@ -38,10 +39,11 @@
     while ($sqlRow = mysqli_fetch_assoc($sqlReturn)) {
     echo '
     <div class="div-recado-guestbook">
-        <img src="imgs/avatars/user'.$sqlRow['avatar'].'.png" class="avatar-guestbook">
-        '.$sqlRow['nome'].'<br>
-        Recado ='.$sqlRow['recado'].'<br>
-        Data ='.$sqlRow['dataserver'].'<br>
+        <div class="div-avatar-guestbook"><img src="imgs/avatars/user'.$sqlRow['avatar'].'.png" class="avatar-guestbook"></div>
+        <div class="div-nome-guestbook">'.$sqlRow['nome'].'</div>
+        <div class="div-recado-recado-guestbook">Recado:</div>
+        <div class="div-recado-texto-guestbook">'.$sqlRow['recado'].'</div>
+        <div class="div-data-guestbook">Data: '.$sqlRow['dataserver'].'</div>
         </div>';
     }
 ?>

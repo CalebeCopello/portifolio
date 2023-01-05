@@ -43,6 +43,13 @@
     margin: 0;
     padding: 0;
 }
+/* 
+**Teste de borda**
+*/
+.div-board {
+    border: 1px dashed black; 
+}
+
 body {
     background-color: var(--cor-contraste-b);
     font-family: var(--font-sans-serif);
@@ -198,19 +205,47 @@ main {
     display: block;
     border: 1px dashed black;
 }
-.nome-guestbook {
-    display: inline-block;
-    margin: 0.5rem;
-    border: 1px dashed black;
-}
-.email-guestbook {
-    display: inline-block;
-    margin: 0.5rem;
-    border: 1px dashed black;
+.avatar-guestbook {
+    width: 3rem; 
+    height: 3rem;
 }
 .div-recado-guestbook {
+    position: relative;
     display: block;
+    background-color: var(--cor-base);
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: 3px;
+    padding: 0.2rem;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.411);
+}
+.div-avatar-guestbook {
+    display: inline-block;
+}
+.div-nome-guestbook {
+    display: inline;
     position: absolute;
+    top: 1rem;
+    left: 3.5rem;
+}
+.div-recado-texto-guestbook {
+    padding: 0 0.5rem;
+} 
+.div-data-guestbook {
+    text-align: right;
+}
+.nome-guestbook-form {
+    display: inline-block;
+    margin: 0.5rem;
+    border: 1px dashed black;
+}
+.email-guestbook-form {
+    display: inline-block;
+    margin: 0.5rem;
+    border: 1px dashed black;
+}
+.div-recado-guestbook-form {
+    display: block;
     border: 1px dashed black;
 }
 
