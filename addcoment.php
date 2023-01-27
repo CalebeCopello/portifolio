@@ -18,7 +18,7 @@
     //TODO colocar a escolha do avatar
     $avatar = '02';
     $email = $_POST['email'];
-    $recado = $_POST['texto'];
+    $recado = nl2br($_POST['texto']);
     $ip = $client->getIP('extra');
     $browser = $client->getBrowser();
     $os = $client->getOS();

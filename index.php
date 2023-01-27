@@ -15,7 +15,7 @@
 <body onresize="size()">
     <!-- CABEÇALHO -->
     <header>
-        <img src="imgs/system-from-freepik.png" alt="Icone janela desenvolvedor, criador Freepik"  class="iconecabeca">
+        <img src="./imgs/system-from-freepik.png" alt="Icone janela desenvolvedor, criador Freepik"  class="iconecabeca">
         <div class="titulo">
             Calebe Copello's Dev BLOG
         </div>
@@ -28,7 +28,7 @@
                 <li><a href="javascript:show('projeto')">Projetos</a></li>
                 <li><a href="javascript:show('contato')">Contato</a></li>
             </ul>
-            <img src="/imgs/cross-from-freepik.png" alt="Icone em 'x' para fechar menu, criador Freepik" class="iconemenu" id="iconemenu" onclick="menu()">
+            <img src="./imgs/cross-from-freepik.png" alt="Icone em 'x' para fechar menu, criador Freepik" class="iconemenu" id="iconemenu" onclick="menu()">
         </menu>
         <form action="" class="tema">
             <span class="tema-tema">Tema:</span>
@@ -46,20 +46,20 @@
                     <iframe src="gb.php" frameborder="0" class="iframe-guestbook" id="iframe-guestbook"></iframe>
                 </div>
             <p class="center">Deixe seu Recado.</p>
-            <form action="/addcoment.php" method="post" class="form-guestbook">
+            <form action="./addcoment.php" method="post" class="form-guestbook">
                 <div class="avatar-guestbook-form">
                 </div>
                 <div class="nome-guestbook-form">
                     <label for="gbnome">Nome: </label>
-                    <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20">
+                    <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20" required>
                 </div>
                 <div class="email-guestbook-form">
                     <label for="gbemail">Email: </label>
-                    <input type="email" name="email" id="gbemail" placeholder="(máximo de 50 caracteres)" maxlength="50" size="20">
+                    <input type="email" name="email" id="gbemail" placeholder="(máximo de 50 caracteres)" maxlength="50" size="20" required>
                 </div>
                 <div class="texto-guestbook-form">
                     <label for="gbtexto">Recado: </label>
-                    <textarea name="texto" id="gbtexto" rows="7" cols="45" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350"></textarea>
+                    <textarea name="texto" id="gbtexto" rows="7" cols="45" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350" required></textarea>
                 </div>
                 <div class="botao-guestbook-form">
                     <input type="submit" value="Enviar Recado">

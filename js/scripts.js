@@ -81,11 +81,13 @@ function menu(op) {
     var getMenuIcon = document.getElementById('iconemenu');
     if (getMenu.style.visibility == 'visible' || getMenu.style.visibility == '' || op == 'esconde') {
         getMenu.style.visibility = "hidden";
-        getMenuIcon.src="/imgs/menu-burger-from-freepik.png";
+        getMenuIcon.src="../portifolio/imgs/menu-burger-from-freepik.png";
+        console.log("/imgs/menu-burger-from-freepik.png");
     }
     else {
         getMenu.style.visibility = "visible";
-        getMenuIcon.src="/imgs/cross-from-freepik.png"
+        getMenuIcon.src="../portifolio/imgs/cross-from-freepik.png";
+        console.log("/imgs/cross-from-freepik.png");
     }
 }
 function size() {
