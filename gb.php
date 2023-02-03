@@ -34,7 +34,7 @@
         dataserver varchar(40) NOT NULL
         ) default charset = utf8mb4;
     ');
-    $sqlSelect = 'SELECT avatar, nome, recado, dataserver FROM gb';
+    $sqlSelect = 'SELECT avatar, nome, recado, dataserver FROM gb ORDER BY id DESC';
     $sqlReturn = mysqli_query($sqlConDB, $sqlSelect);
     while ($sqlRow = mysqli_fetch_assoc($sqlReturn)) {
     echo '
