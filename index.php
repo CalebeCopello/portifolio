@@ -47,8 +47,6 @@
                 </div>
             <p class="center">Deixe seu Recado.</p>
             <form action="./addcoment.php" method="post" class="form-guestbook">
-                <div class="avatar-guestbook-form">
-                </div>
                 <div class="nome-guestbook-form">
                     <label for="gbnome">Nome: </label>
                     <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20" required>
@@ -57,8 +55,12 @@
                     <label for="gbemail">Email: </label>
                     <input type="email" name="email" id="gbemail" placeholder="(máximo de 50 caracteres)" maxlength="50" size="20" required>
                 </div>
+                <div class="avatar-guestbook-form">
+                    <div class="div-text-avatar"><label for="gbavatar">Escolha seu avatar: </label></div>
+                    <div class="div-select-avatar"><img src="./imgs/avatars/user02.png" class="avatar-guestbook-select"></div>
+                </div>
                 <div class="texto-guestbook-form">
-                    <label for="gbtexto">Recado: </label>
+                    <div class='div-text-recado'><label for="gbtexto">Recado: </label></div>
                     <textarea name="texto" id="gbtexto" rows="7" cols="45" placeholder="Deixe seu recado &#10;(máximo de 350 caracteres)" maxlength="350" required></textarea>
                 </div>
                 <div class="botao-guestbook-form">

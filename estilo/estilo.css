@@ -244,6 +244,34 @@ main {
     margin: 0.5rem;
     border: 1px dashed black;
 }
+.avatar-guestbook-form {
+    display: block;
+    margin: 0.5rem;
+    border: 1px dashed black;
+}
+.div-text-avatar {
+    display: inline-block;
+    position: relative;
+    top: -2rem;
+    border: 1px dashed black;
+}
+.div-text-recado {
+    display: inline-block;
+    position: relative;
+    top: -5.5rem;
+    border: 1px dashed black;
+}
+.div-select-avatar {
+    display: inline-block;
+    position: relative;
+    border: 1px dashed black;
+}
+.avatar-guestbook-select {
+    display: inline-block;
+    width: 3rem; 
+    height: 3rem;
+    border: 1px solid white;
+}
 .div-recado-guestbook-form {
     display: block;
     border: 1px dashed black;
