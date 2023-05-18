@@ -57,7 +57,19 @@
                 </div>
                 <div class="avatar-guestbook-form">
                     <div class="div-text-avatar"><label for="gbavatar">Escolha seu avatar: </label></div>
-                    <div class="div-select-avatar"><img src="./imgs/avatars/user02.png" class="avatar-guestbook-select"></div>
+                    <div class="div-select-avatar" onclick="avatarPop()"><img src="./imgs/avatars/user02.png" class="avatar-guestbook-select"></div>
+                <div class="avatar-popup" id="avatar-popup">
+                    <?php
+                    $dir = './imgs/avatars';
+                    $files = array_diff(scandir($dir),array('..','.'));
+                    $i = 0;
+                    while ($i < count($files))
+                    {
+                        echo '<img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select">';
+                        $i++;
+                    }
+                    ?>
+                </div>
                 </div>
                 <div class="texto-guestbook-form">
                     <div class='div-text-recado'><label for="gbtexto">Recado: </label></div>
@@ -100,6 +112,6 @@
         Produzido e Desenvolvido por <a href="https://github.com/CalebeCopello" target="_blank">Calebe Copello</a>.
     </footer>
     <!-- JavaScript --> 
-    <script src="js/scripts.js"></script> 
+    <script src="js/script.js"></script> 
 </body>
 </html>

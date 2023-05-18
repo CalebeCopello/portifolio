@@ -96,3 +96,17 @@ function size() {
         menu('esconde');
     }
 }
+let popUp = document.getElementById('avatar-popup');
+let popUpInit = 'invisible'
+function avatarPop() {
+    console.log(popUpInit);
+    if (popUpInit == 'invisible') {
+        popUp.style.display = 'inline';
+        
+        popUpInit = 'visible'
+    }
+    else {
+        popUp.style.display = 'none';
+        popUpInit = 'invisible'
+    }
+}
