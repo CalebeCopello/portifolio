@@ -273,7 +273,7 @@ main {
     display: inline-block;
     width: 3rem; 
     height: 3rem;
-    border: 1px solid white;
+    border: 1px solid var(--cor-contraste-a);
 }
 .div-recado-guestbook-form {
     display: block;
@@ -283,16 +283,28 @@ main {
     display: none;
     position: absolute;
     border: 1px solid black;
-    top: 20%;
-    left: 20%;
-    width: 30rem;
-    height: 30rem;
+    border-radius: 5px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.116);
+    width: 18.5rem;
+    height: 15rem;
     align-items: center;
     justify-content: center;
-    padding: 0px 30px 60px;
     background-color: var(--cor-base);
+    overflow: scroll;
 }
-
+.avatar-guestbook-select-popup {
+    display: inline-block;
+    margin: 0.5rem;
+    width: 3rem; 
+    height: 3rem;
+    border: 1px solid var(--cor-analoga-b);
+}
+.avatar-guestbook-select-popup:hover {
+    border: 1px solid var(--cor-analoga-a);
+}
+.avatar-select {
+    padding: 1rem;
+}
 .sobre {
     display: none;
 }

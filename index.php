@@ -59,16 +59,18 @@
                     <div class="div-text-avatar"><label for="gbavatar">Escolha seu avatar: </label></div>
                     <div class="div-select-avatar" onclick="avatarPop()"><img src="./imgs/avatars/user02.png" class="avatar-guestbook-select"></div>
                 <div class="avatar-popup" id="avatar-popup">
-                    <?php
-                    $dir = './imgs/avatars';
-                    $files = array_diff(scandir($dir),array('..','.'));
-                    $i = 0;
-                    while ($i < count($files))
-                    {
-                        echo '<img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select">';
-                        $i++;
-                    }
-                    ?>
+                    <div class="avatar-select">
+                        <?php
+                        $dir = './imgs/avatars';
+                        $files = array_diff(scandir($dir),array('..','.'));
+                        $i = 0;
+                        while ($i < count($files))
+                        {
+                            echo '<img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select-popup" onclick="avatarPop()">';
+                            $i++;
+                        }
+                        ?>
+                    </div>
                 </div>
                 </div>
                 <div class="texto-guestbook-form">
