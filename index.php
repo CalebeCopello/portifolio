@@ -66,7 +66,7 @@
                         $i = 0;
                         while ($i < count($files))
                         {
-                            echo '<label><input type="radio" name="avatar" value="'.($i+2).'" class="avatar-radio" onclick="avatarPop('.($i+2).')"><img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select-popup"></label>';
+                            echo '<label><input type="radio" name="avatar" value="'.($i+2).'" class="avatar-radio" onclick="avatarPop('.($i).')"><img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select-popup"></label>';
                             $i++;
                         }
                         ?>

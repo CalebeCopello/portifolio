@@ -106,7 +106,14 @@ function avatarPop(n) {
         popUpInit = 'visible';
     }
     else {
-        avatarPopUp.src=`./imgs/avatars/user${n}.png`;
+        n++;
+        if (n < 10) {
+            avatarPopUp.src=`./imgs/avatars/user0${n}.png`;
+        }
+        else {
+            avatarPopUp.src=`./imgs/avatars/user${n}.png`;
+        }
+        console.log(n);
         popUp.style.display = 'none';
         popUpInit = 'invisible';
     }
