@@ -97,15 +97,18 @@ function size() {
     }
 }
 let popUp = document.getElementById('avatar-popup');
+let avatarPopUp = document.getElementById('avatar-selected');
 let popUpInit = 'invisible';
-function avatarPop() {
+function avatarPop(n) {
     if (popUpInit == 'invisible') {
         popUp.style.display = 'inline';
         
         popUpInit = 'visible';
     }
     else {
+        avatarPopUp.src=`./imgs/avatars/user${n}.png`;
         popUp.style.display = 'none';
         popUpInit = 'invisible';
     }
+
 }

@@ -57,7 +57,7 @@
                 </div>
                 <div class="avatar-guestbook-form">
                     <div class="div-text-avatar"><label for="gbavatar">Escolha seu avatar: </label></div>
-                    <div class="div-select-avatar" onclick="avatarPop()"><img src="./imgs/avatars/user02.png" class="avatar-guestbook-select"></div>
+                    <div class="div-select-avatar" onclick="avatarPop()"><img src="./imgs/avatars/user02.png" class="avatar-guestbook-selected" id="avatar-selected"></div>
                 <div class="avatar-popup" id="avatar-popup">
                     <div class="avatar-select">
                         <?php
@@ -66,7 +66,7 @@
                         $i = 0;
                         while ($i < count($files))
                         {
-                            echo '<img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select-popup" onclick="avatarPop()">';
+                            echo '<label><input type="radio" name="avatar" value="'.($i+2).'" class="avatar-radio" onclick="avatarPop('.($i+2).')"><img src="'.$dir.'/'.$files[$i+2].'" class="avatar-guestbook-select-popup"></label>';
                             $i++;
                         }
                         ?>

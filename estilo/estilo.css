@@ -302,6 +302,22 @@ main {
 .avatar-guestbook-select-popup:hover {
     border: 1px solid var(--cor-analoga-a);
 }
+.avatar-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.avatar-radio + img {
+    cursor: pointer;
+}
+.avatar-radio:checked + img{
+    outline: 1px solid var(--cor-analoga-a);
+}
+.avatar-guestbook-selected {
+    width: 3rem;
+    height: 3rem;
+}
 .avatar-select {
     padding: 1rem;
 }
