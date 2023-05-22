@@ -16,7 +16,11 @@
     require 'clientInfo.php';
     $nome = $_POST['nome'];
     //TODO colocar a escolha do avatar
-    $avatar = '02';
+    $avatar = $_POST['avatar'];
+    $avatar--;
+    if ($avatar < 10 ){
+        $avatar = "0".$avatar;
+    }
     $email = $_POST['email'];
     $recado = nl2br($_POST['texto']);
     $ip = $client->getIP('extra');
