@@ -113,7 +113,6 @@ function avatarPop(n) {
         else {
             avatarPopUp.src=`./imgs/avatars/user${n}.png`;
         }
-        console.log(n);
         popUp.style.display = 'none';
         popUpInit = 'invisible';
     }
