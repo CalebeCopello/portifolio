@@ -17,10 +17,16 @@
     $nome = $_POST['nome'];
     //TODO colocar a escolha do avatar
     $avatar = $_POST['avatar'];
-    $avatar--;
-    if ($avatar < 10 ){
-        $avatar = "0".$avatar;
+    if ($avatar) {
+        $avatar--;
+        if ($avatar < 10 ){
+            $avatar = "0".$avatar;
+        }
     }
+    else {
+        $avatar = "02";
+    }
+    echo $avatar;
     $email = $_POST['email'];
     $recado = nl2br($_POST['texto']);
     $ip = $client->getIP('extra');

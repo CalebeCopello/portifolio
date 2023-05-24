@@ -46,7 +46,7 @@
                     <iframe src="gb.php" frameborder="0" class="iframe-guestbook" id="iframe-guestbook"></iframe>
                 </div>
             <p class="center">Deixe seu Recado.</p>
-            <form action="./addcoment.php" method="post" class="form-guestbook">
+            <form action="./addcomment.php" method="post" class="form-guestbook">
                 <div class="nome-guestbook-form">
                     <label for="gbnome">Nome: </label>
                     <input type="text" name="nome" id="gbnome" placeholder="(máximo de 30 letras)" minlength="3" maxlength="30" size="20" required>
