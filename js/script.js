@@ -106,12 +106,14 @@ function avatarPop(n) {
         popUpInit = 'visible';
     }
     else {
-        n++;
-        if (n < 10) {
-            avatarPopUp.src=`./imgs/avatars/user0${n}.png`;
-        }
-        else {
-            avatarPopUp.src=`./imgs/avatars/user${n}.png`;
+        if(typeof n != "undefined"){
+            n++;
+            if (n < 10) {
+                avatarPopUp.src=`./imgs/avatars/user0${n}.png`;
+            }
+            else {
+                avatarPopUp.src=`./imgs/avatars/user${n}.png`;
+            }
         }
         popUp.style.display = 'none';
         popUpInit = 'invisible';
