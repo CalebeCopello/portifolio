@@ -12,9 +12,9 @@
 </head>
 <body>
 <?php
-    $sqlInfo = array('localhost','root','','gnrldb');
+    $sqlInfo = array('mysql','root','1234','gnrldb');
     //@para esconder o aviso de erro padrão do PHP
-    $sqlCon = @mysqli_connect($sqlInfo[0], $sqlInfo[1], $sqlInfo[2]);
+    $sqlCon = mysqli_connect($sqlInfo[0], $sqlInfo[1], $sqlInfo[2]);
     if (!$sqlCon) {
         if (mysqli_connect_errno() == '2002') {
             die('Conexão falhou: Host não foi encontrado');
@@ -26,7 +26,7 @@
         die('Conexão falhou: '. mysqli_connect_error(). ' Erro nº: '. mysqli_connect_errno());
         }
     }
-    $sqlConDB = @mysqli_connect($sqliInfo[0], $sqlInfo[1], $sqlInfo[2], $sqlInfo[3]);
+    $sqlConDB = mysqli_connect($sqlInfo[0], $sqlInfo[1], $sqlInfo[2], $sqlInfo[3]);
     if (!$sqlConDB) {
         if (mysqli_connect_errno() == '1049') {
             echo 'Banco de Dados não encontrado! Criando Bando de Dados.';

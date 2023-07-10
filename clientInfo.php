@@ -124,7 +124,8 @@ class clientInfo {
         else {
             $this->os = 'Outro';
         }
-        $this->language = locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+        //TODO: fix next line
+        $this->language = 'pt_br'; //locale_accept_from_http($_SERVER['HTTP_ACCEPT_LANGUAGE']);
         //**GeoPlugin
         $ip = '179.189.152.132'; //IP para exemplificar
         //$ip = $this->ip;
